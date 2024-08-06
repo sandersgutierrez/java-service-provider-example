@@ -11,7 +11,7 @@ public class Main {
         ServiceLoader<PeopleService> serviceLoader = ServiceLoader.load(PeopleService.class);
         Map<String, PeopleService> services = new HashMap<>();
         for (PeopleService service: serviceLoader) {
-            System.out.println("I'v found a service called '" + service.getClass().getSimpleName() + "' !");
+            System.out.println("I've found a service called '" + service.getClass().getSimpleName() + "' !");
             services.put(service.getClass().getSimpleName(), service);
         }
         System.out.println("Found " + services.size() + " services!");
