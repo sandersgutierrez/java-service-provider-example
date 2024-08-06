@@ -9,14 +9,13 @@ import java.util.List;
 public class PeopleServiceImpl implements PeopleService {
     private static final List<Person> peopleList = new ArrayList<>();
 
-    @Override
-    public List<Person> getPeople() {
-        fillPeopleList();
-        return peopleList;
+    static {
+        peopleList.add(new Person("Sanders", "Gutiérrez"));
+        peopleList.add(new Person("Celeste", "Gutiérrez"));
     }
 
-    private void fillPeopleList() {
-        peopleList.add(new Person("Sanders", "Gutiérrez"));
-        peopleList.add(new Person("Dayhana", "Rojas"));
+    @Override
+    public List<Person> getPeople() {
+        return peopleList;
     }
 }
